@@ -3,7 +3,7 @@
 //  Mail NotifierTests
 //
 //  Created by Gordon Fontenot on 11/15/13.
-//  Copyright (c) 2013 thoughtbot. All rights reserved.
+//  Copyright (c) 2013 Gordon Fontenot. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

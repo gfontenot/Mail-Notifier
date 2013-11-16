@@ -18,6 +18,9 @@
 		F8E5A11E18369839005336D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A0FD18369839005336D4 /* Cocoa.framework */; };
 		F8E5A12618369839005336D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8E5A12418369839005336D4 /* InfoPlist.strings */; };
 		F8E5A12818369839005336D4 /* Mail_NotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E5A12718369839005336D4 /* Mail_NotifierTests.m */; };
+		F8E5A1321836A5A9005336D4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A1311836A5A9005336D4 /* CoreServices.framework */; };
+		F8E5A1401836CB38005336D4 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = F8E5A13B1836BBA3005336D4 /* Localizable.stringsdict */; };
+		F8E5A1471836CD60005336D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8E5A1491836CD60005336D4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		F8E5A12318369839005336D4 /* Mail NotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mail NotifierTests-Info.plist"; sourceTree = "<group>"; };
 		F8E5A12518369839005336D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8E5A12718369839005336D4 /* Mail_NotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mail_NotifierTests.m; sourceTree = "<group>"; };
+		F8E5A1311836A5A9005336D4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		F8E5A13E1836BD59005336D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		F8E5A1481836CD60005336D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E5A1321836A5A9005336D4 /* CoreServices.framework in Frameworks */,
 				F8E5A0FE18369839005336D4 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +102,7 @@
 		F8E5A0FC18369839005336D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8E5A1311836A5A9005336D4 /* CoreServices.framework */,
 				F8E5A0FD18369839005336D4 /* Cocoa.framework */,
 				F8E5A11C18369839005336D4 /* XCTest.framework */,
 				F8E5A0FF18369839005336D4 /* Other Frameworks */,
@@ -120,6 +128,7 @@
 				F8E5A11218369839005336D4 /* MainMenu.xib */,
 				F8E5A11518369839005336D4 /* Images.xcassets */,
 				F8E5A10418369839005336D4 /* Supporting Files */,
+				F8E5A13B1836BBA3005336D4 /* Localizable.stringsdict */,
 			);
 			path = "Mail Notifier";
 			sourceTree = "<group>";
@@ -132,6 +141,7 @@
 				F8E5A10918369839005336D4 /* main.m */,
 				F8E5A10B18369839005336D4 /* Mail Notifier-Prefix.pch */,
 				F8E5A10C18369839005336D4 /* Credits.rtf */,
+				F8E5A1491836CD60005336D4 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,7 +210,7 @@
 			attributes = {
 				CLASSPREFIX = MN;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = thoughtbot;
+				ORGANIZATIONNAME = "Gordon Fontenot";
 				TargetAttributes = {
 					F8E5A11A18369839005336D4 = {
 						TestTargetID = F8E5A0F918369839005336D4;
@@ -234,7 +244,9 @@
 				F8E5A10818369839005336D4 /* InfoPlist.strings in Resources */,
 				F8E5A11618369839005336D4 /* Images.xcassets in Resources */,
 				F8E5A10E18369839005336D4 /* Credits.rtf in Resources */,
+				F8E5A1471836CD60005336D4 /* Localizable.strings in Resources */,
 				F8E5A11418369839005336D4 /* MainMenu.xib in Resources */,
+				F8E5A1401836CB38005336D4 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +319,22 @@
 				F8E5A12518369839005336D4 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F8E5A13B1836BBA3005336D4 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8E5A13E1836BD59005336D4 /* Base */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		F8E5A1491836CD60005336D4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8E5A1481836CD60005336D4 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
