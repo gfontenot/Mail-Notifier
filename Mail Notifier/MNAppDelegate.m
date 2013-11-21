@@ -48,7 +48,8 @@ static void inboxUpdated(ConstFSEventStreamRef streamRef, void *clientCallBackIn
         }
     }];
 
-    self.statusItem.title = [NSString localizedStringWithFormat:NSLocalizedString(@"%d email(s)", @"Label for the number of emails"), emailCount];
+    self.statusItem.image = [NSImage imageNamed:@"MenubarIcon"];
+    self.statusItem.title = [NSString stringWithFormat:@" %@", @(emailCount)];
 }
 
 - (void)createFSStreamForInbox:(NSString *)inbox
