@@ -8,60 +8,38 @@
 
 #include <CoreServices/CoreServices.h>
 #import "MNAppDelegate.h"
+#import "MNMailboxParser.h"
+#import "MNInbox.h"
 
 @interface MNAppDelegate ()
 
-@property (nonatomic, weak) IBOutlet NSMenu *statusMenu;
-@property (nonatomic, strong) NSStatusItem *statusItem;
+@property (nonatomic) IBOutlet NSMenu *statusMenu;
+@property (nonatomic) NSStatusItem *statusItem;
+@property (nonatomic) MNMailboxParser *parser;
 
 @end
 
 @implementation MNAppDelegate
 
-static void inboxUpdated(ConstFSEventStreamRef streamRef, void *clientCallBackInfo, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags eventFlags[], const FSEventStreamEventId eventIds[])
-{
-    MNAppDelegate *delegate = [[NSApplication sharedApplication] delegate];
-    [delegate updateStatusTitle];
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    self.parser = [[MNMailboxParser alloc] init];
+    NSString *mailDir = [NSString stringWithFormat:@"%@/.mail", NSHomeDirectory()];
+    [self.parser parseMailboxesAtPath:mailDir];
     [self updateStatusTitle];
+    [self registerForNotifications];
 }
 
 - (void)updateStatusTitle
 {
-    __block NSInteger emailCount = 0;
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *mailDir = [NSString stringWithFormat:@"%@/.mail", NSHomeDirectory()];
-    NSArray *mailDirectories = [fileManager contentsOfDirectoryAtPath:mailDir error:nil];
-    [mailDirectories enumerateObjectsUsingBlock:^(NSString *mailbox, NSUInteger idx, BOOL *stop) {
-        NSString *mailboxPath = [mailDir stringByAppendingPathComponent:mailbox];
-        NSString *inbox = [mailboxPath stringByAppendingPathComponent:@"INBOX"];
-        if ([fileManager fileExistsAtPath:inbox]) {
-            [self createFSStreamForInbox:inbox];
-            [[fileManager contentsOfDirectoryAtPath:inbox error:nil] enumerateObjectsUsingBlock:^(NSString *box, NSUInteger idx, BOOL *stop) {
-                NSString *mbox = [inbox stringByAppendingPathComponent:box];
-                emailCount += [[fileManager contentsOfDirectoryAtPath:mbox error:nil] count];
-            }];
-        }
-    }];
-
     self.statusItem.image = [NSImage imageNamed:@"MenubarIcon"];
-    self.statusItem.title = [NSString stringWithFormat:@" %@", @(emailCount)];
+    self.statusItem.title = [NSString stringWithFormat:@"%@", @([self.parser emailCount])];
 }
 
-- (void)createFSStreamForInbox:(NSString *)inbox
+- (void)registerForNotifications
 {
-    CFStringRef inboxPath = (__bridge CFStringRef)inbox;
-    CFArrayRef pathsToWatch = CFArrayCreate(NULL, (const void **)&inboxPath, 1, NULL);
-    void *callbackInfo = NULL;
-    CFAbsoluteTime latency = 3.0;
-
-    FSEventStreamRef stream = FSEventStreamCreate(NULL, &inboxUpdated, callbackInfo, pathsToWatch, kFSEventStreamEventIdSinceNow, latency, kFSEventStreamCreateFlagNone);
-    FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
-    FSEventStreamStart(stream);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateStatusTitle) name:MNInboxDidUpdateNotification object:nil];
 }
 
 @end

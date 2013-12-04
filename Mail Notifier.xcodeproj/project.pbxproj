@@ -10,24 +10,12 @@
 		F80FDE35183E620C00812462 /* MNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F80FDE26183E620C00812462 /* MNAppDelegate.m */; };
 		F80FDE36183E620C00812462 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80FDE28183E620C00812462 /* Images.xcassets */; };
 		F80FDE39183E620C00812462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F80FDE2F183E620C00812462 /* main.m */; };
+		F82156F3183E6DB80017C589 /* MNMailboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F82156F2183E6DB80017C589 /* MNMailboxParser.m */; };
+		F82156F7183E71F20017C589 /* MNInbox.m in Sources */ = {isa = PBXBuildFile; fileRef = F82156F6183E71F20017C589 /* MNInbox.m */; };
 		F848D746183E629B00C9F55A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F848D748183E629B00C9F55A /* MainMenu.xib */; };
 		F8E5A0FE18369839005336D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A0FD18369839005336D4 /* Cocoa.framework */; };
-		F8E5A11D18369839005336D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A11C18369839005336D4 /* XCTest.framework */; };
-		F8E5A11E18369839005336D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A0FD18369839005336D4 /* Cocoa.framework */; };
-		F8E5A12618369839005336D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8E5A12418369839005336D4 /* InfoPlist.strings */; };
-		F8E5A12818369839005336D4 /* Mail_NotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E5A12718369839005336D4 /* Mail_NotifierTests.m */; };
 		F8E5A1321836A5A9005336D4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A1311836A5A9005336D4 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F8E5A11F18369839005336D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8E5A0F218369839005336D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8E5A0F918369839005336D4;
-			remoteInfo = "Mail Notifier";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F80FDE25183E620C00812462 /* MNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNAppDelegate.h; sourceTree = "<group>"; };
@@ -36,16 +24,16 @@
 		F80FDE29183E620C00812462 /* Mail Notifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Mail Notifier-Info.plist"; sourceTree = "<group>"; };
 		F80FDE2E183E620C00812462 /* Mail Notifier-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mail Notifier-Prefix.pch"; sourceTree = "<group>"; };
 		F80FDE2F183E620C00812462 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F848D747183E629B00C9F55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F82156F1183E6DB80017C589 /* MNMailboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNMailboxParser.h; sourceTree = "<group>"; };
+		F82156F2183E6DB80017C589 /* MNMailboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNMailboxParser.m; sourceTree = "<group>"; };
+		F82156F5183E71F20017C589 /* MNInbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNInbox.h; sourceTree = "<group>"; };
+		F82156F6183E71F20017C589 /* MNInbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNInbox.m; sourceTree = "<group>"; };
+		F848D747183E629B00C9F55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F8E5A0FA18369839005336D4 /* Mail Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mail Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E5A0FD18369839005336D4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F8E5A10018369839005336D4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F8E5A10118369839005336D4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F8E5A10218369839005336D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F8E5A11B18369839005336D4 /* Mail NotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mail NotifierTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8E5A11C18369839005336D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F8E5A12318369839005336D4 /* Mail NotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mail NotifierTests-Info.plist"; sourceTree = "<group>"; };
-		F8E5A12718369839005336D4 /* Mail_NotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mail_NotifierTests.m; sourceTree = "<group>"; };
 		F8E5A1311836A5A9005336D4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -59,15 +47,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8E5A11818369839005336D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8E5A11E18369839005336D4 /* Cocoa.framework in Frameworks */,
-				F8E5A11D18369839005336D4 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				F80FDE24183E620C00812462 /* Delegates */,
+				F82156F4183E6DC00017C589 /* Models */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -116,16 +96,21 @@
 			path = "Other Sources";
 			sourceTree = "<group>";
 		};
+		F82156F4183E6DC00017C589 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F82156F1183E6DB80017C589 /* MNMailboxParser.h */,
+				F82156F2183E6DB80017C589 /* MNMailboxParser.m */,
+				F82156F5183E71F20017C589 /* MNInbox.h */,
+				F82156F6183E71F20017C589 /* MNInbox.m */,
 			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F8E5A0F118369839005336D4 = {
 			isa = PBXGroup;
 			children = (
 				F8E5A10318369839005336D4 /* Mail Notifier */,
-				F8E5A12118369839005336D4 /* Mail NotifierTests */,
 				F8E5A0FC18369839005336D4 /* Frameworks */,
 				F8E5A0FB18369839005336D4 /* Products */,
 			);
@@ -138,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				F8E5A0FA18369839005336D4 /* Mail Notifier.app */,
-				F8E5A11B18369839005336D4 /* Mail NotifierTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,7 +132,6 @@
 			children = (
 				F8E5A1311836A5A9005336D4 /* CoreServices.framework */,
 				F8E5A0FD18369839005336D4 /* Cocoa.framework */,
-				F8E5A11C18369839005336D4 /* XCTest.framework */,
 				F8E5A0FF18369839005336D4 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -173,24 +156,6 @@
 			path = "Mail Notifier";
 			sourceTree = "<group>";
 		};
-		F8E5A12118369839005336D4 /* Mail NotifierTests */ = {
-			isa = PBXGroup;
-			children = (
-				F8E5A12718369839005336D4 /* Mail_NotifierTests.m */,
-				F8E5A12218369839005336D4 /* Supporting Files */,
-			);
-			path = "Mail NotifierTests";
-			sourceTree = "<group>";
-		};
-		F8E5A12218369839005336D4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8E5A12318369839005336D4 /* Mail NotifierTests-Info.plist */,
-				F8E5A12418369839005336D4 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,24 +177,6 @@
 			productReference = F8E5A0FA18369839005336D4 /* Mail Notifier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F8E5A11A18369839005336D4 /* Mail NotifierTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8E5A12E18369839005336D4 /* Build configuration list for PBXNativeTarget "Mail NotifierTests" */;
-			buildPhases = (
-				F8E5A11718369839005336D4 /* Sources */,
-				F8E5A11818369839005336D4 /* Frameworks */,
-				F8E5A11918369839005336D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F8E5A12018369839005336D4 /* PBXTargetDependency */,
-			);
-			name = "Mail NotifierTests";
-			productName = "Mail NotifierTests";
-			productReference = F8E5A11B18369839005336D4 /* Mail NotifierTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,11 +186,6 @@
 				CLASSPREFIX = MN;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Gordon Fontenot";
-				TargetAttributes = {
-					F8E5A11A18369839005336D4 = {
-						TestTargetID = F8E5A0F918369839005336D4;
-					};
-				};
 			};
 			buildConfigurationList = F8E5A0F518369839005336D4 /* Build configuration list for PBXProject "Mail Notifier" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -259,7 +201,6 @@
 			projectRoot = "";
 			targets = (
 				F8E5A0F918369839005336D4 /* Mail Notifier */,
-				F8E5A11A18369839005336D4 /* Mail NotifierTests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,14 +212,6 @@
 			files = (
 				F848D746183E629B00C9F55A /* MainMenu.xib in Resources */,
 				F80FDE36183E620C00812462 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E5A11918369839005336D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8E5A12618369839005336D4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,28 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82156F3183E6DB80017C589 /* MNMailboxParser.m in Sources */,
 				F80FDE39183E620C00812462 /* main.m in Sources */,
 				F80FDE35183E620C00812462 /* MNAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E5A11718369839005336D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8E5A12818369839005336D4 /* Mail_NotifierTests.m in Sources */,
+				F82156F7183E71F20017C589 /* MNInbox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F8E5A12018369839005336D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F8E5A0F918369839005336D4 /* Mail Notifier */;
-			targetProxy = F8E5A11F18369839005336D4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F848D748183E629B00C9F55A /* MainMenu.xib */ = {
@@ -336,14 +255,6 @@
 				F848D747183E629B00C9F55A /* Base */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		F8E5A12418369839005336D4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8E5A12518369839005336D4 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -469,46 +380,6 @@
 			};
 			name = Release;
 		};
-		F8E5A12F18369839005336D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mail Notifier.app/Contents/MacOS/Mail Notifier";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mail Notifier/Mail Notifier-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Mail NotifierTests/Mail NotifierTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F8E5A13018369839005336D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mail Notifier.app/Contents/MacOS/Mail Notifier";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mail Notifier/Mail Notifier-Prefix.pch";
-				INFOPLIST_FILE = "Mail NotifierTests/Mail NotifierTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -526,15 +397,6 @@
 			buildConfigurations = (
 				F8E5A12C18369839005336D4 /* Debug */,
 				F8E5A12D18369839005336D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8E5A12E18369839005336D4 /* Build configuration list for PBXNativeTarget "Mail NotifierTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8E5A12F18369839005336D4 /* Debug */,
-				F8E5A13018369839005336D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
