@@ -13,6 +13,7 @@
 		F82156F3183E6DB80017C589 /* MNMailboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F82156F2183E6DB80017C589 /* MNMailboxParser.m */; };
 		F82156F7183E71F20017C589 /* MNInbox.m in Sources */ = {isa = PBXBuildFile; fileRef = F82156F6183E71F20017C589 /* MNInbox.m */; };
 		F848D746183E629B00C9F55A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F848D748183E629B00C9F55A /* MainMenu.xib */; };
+		F87434D01850DA750084D0EB /* MNStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = F87434CF1850DA750084D0EB /* MNStatusController.m */; };
 		F8E5A0FE18369839005336D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A0FD18369839005336D4 /* Cocoa.framework */; };
 		F8E5A1321836A5A9005336D4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E5A1311836A5A9005336D4 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,8 @@
 		F82156F5183E71F20017C589 /* MNInbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNInbox.h; sourceTree = "<group>"; };
 		F82156F6183E71F20017C589 /* MNInbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNInbox.m; sourceTree = "<group>"; };
 		F848D747183E629B00C9F55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F87434CE1850DA750084D0EB /* MNStatusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNStatusController.h; sourceTree = "<group>"; };
+		F87434CF1850DA750084D0EB /* MNStatusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNStatusController.m; sourceTree = "<group>"; };
 		F8E5A0FA18369839005336D4 /* Mail Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mail Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E5A0FD18369839005336D4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F8E5A10018369839005336D4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -99,6 +102,8 @@
 		F82156F4183E6DC00017C589 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F87434CE1850DA750084D0EB /* MNStatusController.h */,
+				F87434CF1850DA750084D0EB /* MNStatusController.m */,
 				F82156F1183E6DB80017C589 /* MNMailboxParser.h */,
 				F82156F2183E6DB80017C589 /* MNMailboxParser.m */,
 				F82156F5183E71F20017C589 /* MNInbox.h */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87434D01850DA750084D0EB /* MNStatusController.m in Sources */,
 				F82156F3183E6DB80017C589 /* MNMailboxParser.m in Sources */,
 				F80FDE39183E620C00812462 /* main.m in Sources */,
 				F80FDE35183E620C00812462 /* MNAppDelegate.m in Sources */,

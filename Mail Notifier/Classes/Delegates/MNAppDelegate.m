@@ -8,14 +8,11 @@
 
 #include <CoreServices/CoreServices.h>
 #import "MNAppDelegate.h"
-#import "MNMailboxParser.h"
-#import "MNInbox.h"
+#import "MNStatusController.h"
 
 @interface MNAppDelegate ()
 
-@property (nonatomic) IBOutlet NSMenu *statusMenu;
-@property (nonatomic) NSStatusItem *statusItem;
-@property (nonatomic) MNMailboxParser *parser;
+@property (nonatomic) MNStatusController *statusController;
 
 @end
 
@@ -23,23 +20,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    self.parser = [[MNMailboxParser alloc] init];
-    NSString *mailDir = [NSString stringWithFormat:@"%@/.mail", NSHomeDirectory()];
-    [self.parser parseMailboxesAtPath:mailDir];
-    [self updateStatusTitle];
-    [self registerForNotifications];
-}
-
-- (void)updateStatusTitle
-{
-    self.statusItem.image = [NSImage imageNamed:@"MenubarIcon"];
-    self.statusItem.title = [NSString stringWithFormat:@"%@", @([self.parser emailCount])];
-}
-
-- (void)registerForNotifications
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateStatusTitle) name:MNInboxDidUpdateNotification object:nil];
+    self.statusController = [[MNStatusController alloc] init];
+    [self.statusController setupStatusItem];
 }
 
 @end
