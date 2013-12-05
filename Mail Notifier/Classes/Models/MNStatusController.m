@@ -31,8 +31,13 @@
 - (void)updateStatusTitle
 {
     NSInteger emailCount = [self.parser emailCount];
-    self.statusItem.image = [NSImage imageNamed:@"MenubarIcon"];
-    self.statusItem.title = [NSString stringWithFormat:@"%@", @(emailCount)];
+    if (emailCount) {
+        self.statusItem.image = [NSImage imageNamed:@"MenubarIcon"];
+        self.statusItem.title = [NSString stringWithFormat:@"%@", @(emailCount)];
+    } else {
+        [[NSStatusBar systemStatusBar] removeStatusItem:self.statusItem];
+        self.statusItem = nil;
+    }
 }
 
 - (void)registerForNotifications
