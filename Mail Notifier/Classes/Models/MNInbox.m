@@ -41,8 +41,9 @@ NSString * const MNInboxDidUpdateNotification = @"com.gfontenot.mail-notifier.in
 
 - (NSString *)name
 {
-    NSString *rootName = [self.inboxPath stringByReplacingOccurrencesOfString:@"INBOX" withString:@""];
-    return [rootName lastPathComponent];
+    NSString *accountPath = [self.inboxPath stringByReplacingOccurrencesOfString:@"INBOX" withString:@""];
+    NSString *rootName = [accountPath lastPathComponent];
+    return [rootName stringByReplacingOccurrencesOfString:@"-" withString:@"@"];
 }
 
 #pragma mark - Private Methods
