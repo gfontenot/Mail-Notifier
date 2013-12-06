@@ -71,10 +71,10 @@
 {
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Emails"];
     NSArray *inboxes = [self.parser inboxes];
-    NSInteger maxLength = [[inboxes valueForKeyPath:@"@max.self.name.length"] integerValue];
     [inboxes enumerateObjectsUsingBlock:^(MNInbox *inbox, NSUInteger idx, BOOL *stop) {
         MNMenuItem *item = [[MNMenuItem alloc] init];
-        item.title = [inbox name];
+        [item setTitleText:[inbox name]];
+        [item setDetailText:[NSString stringWithFormat:@"(%@)", @([inbox emailCount])]];
         [menu addItem:item];
     }];
 

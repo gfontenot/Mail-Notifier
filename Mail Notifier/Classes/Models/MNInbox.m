@@ -39,6 +39,12 @@ NSString * const MNInboxDidUpdateNotification = @"com.gfontenot.mail-notifier.in
     return emailCount;
 }
 
+- (NSString *)name
+{
+    NSString *rootName = [self.inboxPath stringByReplacingOccurrencesOfString:@"INBOX" withString:@""];
+    return [rootName lastPathComponent];
+}
+
 #pragma mark - Private Methods
 
 - (void)registerForFSEvents

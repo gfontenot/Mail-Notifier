@@ -12,5 +12,6 @@ extern NSString *const MNInboxDidUpdateNotification;
 
 - (instancetype)initWithInboxPath:(NSString *)inboxPath;
 - (NSInteger)emailCount;
+- (NSString *)name;
 
 @end
